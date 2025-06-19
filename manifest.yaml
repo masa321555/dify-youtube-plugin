@@ -1,0 +1,22 @@
+# manifest.yaml
+version: 0.0.1
+type: plugin
+author: masa321555
+name: youtube-channel-analyzer-tool
+label:
+  ja_JP: YouTubeチャンネル動画分析
+  en_US: YouTube Channel Video Analyzer
+description:
+  ja_JP: 指定したYouTubeチャンネルの特定期間の動画情報を取得します。
+  en_US: Get video information from a specified YouTube channel within a date range.
+icon: icon.svg
+# ▼ 重要：ここには、あなたのPythonコードを動かす外部サーバーのURLを後で設定します
+# 例：https://あなたのサーバー.onrender.com/openapi.yaml
+# api_endpoint: "YOUR_API_ENDPOINT_HERE"
+auth:
+  type: "api_key"
+  header_name: "Authorization"
+  header_type: "bearer"
+plugins:
+  tools:
+    - provider/youtube-plugin.yaml
